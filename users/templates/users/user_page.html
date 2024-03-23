@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <script src="{% static 'draw_charts.js' %}"></script> 
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+
+    
+</head>
+<body style="background-image: url('https://images.alphacoders.com/102/thumb-1920-1026345.jpg');">
+   
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-8 col-md-9 col-lg-10 col-xl-10">
+              <div class="card bg-dark text-white shadow-lg m-5" style="border-radius: 1rem;">
+                <div class="card-body p-5 text-center">
+      
+                  <div class="mb-md-5 mt-md-4 pb-5">
+
+                    <label class="text-white-50 mb-5" for="filename">File name</label>
+                    <input class="text-black-50 mb-5" type="text" id="filename"><br><br>
+                    <label class="text-white-50 mb-5" for="subject">Subject</label>
+                    <input class="text-black-50 mb-5" type="text" id="subject"><br><br>
+                    <button class="btn btn-outline-light btn-lg px-5" id="start-camera" onclick="init()">Show statistics</button>
+                    <canvas class="container" id="myChart" style="width:100%"></canvas>
+
+                  </div>
+
+      
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+</body>
+
+</html>
